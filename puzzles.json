@@ -529,7 +529,7 @@
         "certified_against": "the raw priv=1 P2PKH vectors, the public BIP39 all-zero-entropy test vector, and a public old-Electrum v1 test vector, since no solved sibling exists for this puzzle"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the derivation, both candidate formats, and every path are fully mapped and oracle-certified; about 479 million derivations have been tested across anchor-based and anchor-free families (including 7.2 billion GPU sequences over a 13-word pool with no fixed positions), all negative; the 4 word-position anchors that framed nearly all of that work trace to 2 Reddit accounts with zero posts about this puzzle and are retracted here, so what remains open is the 12-word input, not compute or path coverage",
+      "difficulty_note": "the derivation, both candidate formats, and every path are fully mapped and oracle-certified; about 479 million derivations have been tested across anchor-based and anchor-free families (including 7.2 billion GPU sequences over a 13-word pool with no fixed positions), all negative; the 4 word-position anchors that framed nearly all of that work trace to 2 Reddit accounts with zero posts about this puzzle and are retracted here, so what remains open is the 12-word input, not compute or path coverage; on 2026-09-24 the rune script was read in full (Russian, 3 inscriptions), and its line under the dial, the sum of two numbers, reinstates the tower 3 and moon 13 anchors as author-derived and points to a phrase longer than 12 words",
       "tested_total": {
         "candidates": 479054867,
         "families": 14,
@@ -538,20 +538,20 @@
       "leads": [
         {
           "rank": 1,
+          "title": "read the collage under the author's rule, the sum of two numbers, for a phrase longer than 12 words",
+          "cost": "hours",
+          "status": "open"
+        },
+        {
+          "rank": 2,
           "title": "log the 3 already-launched btcrecover runs",
           "cost": "minutes",
           "status": "open"
         },
         {
-          "rank": 2,
+          "rank": 3,
           "title": "re-derive the word inventory from the image itself",
           "cost": "hours",
-          "status": "open"
-        },
-        {
-          "rank": 3,
-          "title": "cross the rune transcription against the Russian-prose cipher key",
-          "cost": "minutes",
           "status": "open"
         },
         {
@@ -559,6 +559,12 @@
           "title": "settle BIP39 versus old-Electrum from a source",
           "cost": "needs-new-information",
           "status": "open"
+        },
+        {
+          "rank": 5,
+          "title": "cross the rune transcription against the Russian-prose cipher key",
+          "cost": "minutes",
+          "status": "done"
         }
       ],
       "solutions": [],
@@ -591,7 +597,7 @@
         }
       ],
       "third_party_material": "the collage image in clues/ is the author's own published puzzle material, posted once on Reddit; no other author material exists; community forum discussion is cited by URL and date only, never reproduced",
-      "last_updated": "2026-09-07",
+      "last_updated": "2026-09-24",
       "folder": "1-big-prizes/blm-brave-new-world-0-2btc"
     },
     {

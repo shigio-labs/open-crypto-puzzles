@@ -1,0 +1,378 @@
+{
+  "_comment": "Monoalphabetic key of the geometric rune script on clues/welcome-to-the-brave-new-world.png, measured on 2026-09-24. Each exemplar box is [x0, y0, x1, y1] in the original 1600x1200 pixel grid; column glyphs are rotated 90 degrees clockwise before reading. Word separators in the script are colons. The key was checked by reading all 19 words of the 3 inscriptions with it and finding every word in a Russian frequency list; see analysis/runes.md.",
+  "image": "clues/welcome-to-the-brave-new-world.png",
+  "separator": "colon",
+  "language": "Russian",
+  "exemplars": [
+    {
+      "letter": "я",
+      "box": [
+        204,
+        47,
+        217,
+        62
+      ],
+      "rotate_clockwise": false,
+      "shape": "lambda-like glyph with a foot"
+    },
+    {
+      "letter": "а",
+      "box": [
+        237,
+        47,
+        251,
+        62
+      ],
+      "rotate_clockwise": false,
+      "shape": "triangle, apex up"
+    },
+    {
+      "letter": "б",
+      "box": [
+        196,
+        71,
+        208,
+        84
+      ],
+      "rotate_clockwise": false,
+      "shape": "circle with a bar above"
+    },
+    {
+      "letter": "в",
+      "box": [
+        1530,
+        725,
+        1553,
+        746
+      ],
+      "rotate_clockwise": true,
+      "shape": "hourglass, X between two bars"
+    },
+    {
+      "letter": "г",
+      "box": [
+        239,
+        94,
+        248,
+        104
+      ],
+      "rotate_clockwise": false,
+      "shape": "right triangle"
+    },
+    {
+      "letter": "д",
+      "box": [
+        254,
+        45,
+        268,
+        61
+      ],
+      "rotate_clockwise": false,
+      "shape": "triangle on a stem with a crossbar"
+    },
+    {
+      "letter": "е",
+      "box": [
+        270,
+        45,
+        284,
+        61
+      ],
+      "rotate_clockwise": false,
+      "shape": "three parallel slashes"
+    },
+    {
+      "letter": "з",
+      "box": [
+        1530,
+        888,
+        1554,
+        900
+      ],
+      "rotate_clockwise": true,
+      "shape": "hook, like a 4 without the crossbar"
+    },
+    {
+      "letter": "и",
+      "box": [
+        1530,
+        594,
+        1553,
+        611
+      ],
+      "rotate_clockwise": true,
+      "shape": "circle with a vertical line through it"
+    },
+    {
+      "letter": "и",
+      "box": [
+        1532,
+        508,
+        1554,
+        525
+      ],
+      "rotate_clockwise": true,
+      "shape": "open cup on a stem (second form of the same letter)"
+    },
+    {
+      "letter": "к",
+      "box": [
+        1530,
+        551,
+        1553,
+        565
+      ],
+      "rotate_clockwise": true,
+      "shape": "5-like hook with a dot"
+    },
+    {
+      "letter": "л",
+      "box": [
+        333,
+        70,
+        342,
+        83
+      ],
+      "rotate_clockwise": false,
+      "shape": "circle on a stem, no crossbar"
+    },
+    {
+      "letter": "м",
+      "box": [
+        200,
+        94,
+        212,
+        104
+      ],
+      "rotate_clockwise": false,
+      "shape": "M with crossing inner strokes"
+    },
+    {
+      "letter": "м",
+      "box": [
+        309,
+        1027,
+        322,
+        1040
+      ],
+      "rotate_clockwise": false,
+      "shape": "X between two vertical bars (second form of the same letter)"
+    },
+    {
+      "letter": "н",
+      "box": [
+        225,
+        47,
+        235,
+        62
+      ],
+      "rotate_clockwise": false,
+      "shape": "I with serifs"
+    },
+    {
+      "letter": "о",
+      "box": [
+        368,
+        44,
+        380,
+        58
+      ],
+      "rotate_clockwise": false,
+      "shape": "circle on a stem with a crossbar"
+    },
+    {
+      "letter": "п",
+      "box": [
+        265,
+        73,
+        276,
+        84
+      ],
+      "rotate_clockwise": false,
+      "shape": "square"
+    },
+    {
+      "letter": "р",
+      "box": [
+        1530,
+        767,
+        1548,
+        789
+      ],
+      "rotate_clockwise": true,
+      "shape": "square cup with an inner bar and a foot"
+    },
+    {
+      "letter": "с",
+      "box": [
+        304,
+        45,
+        318,
+        60
+      ],
+      "rotate_clockwise": false,
+      "shape": "diamond"
+    },
+    {
+      "letter": "т",
+      "box": [
+        357,
+        72,
+        370,
+        84
+      ],
+      "rotate_clockwise": false,
+      "shape": "cup"
+    },
+    {
+      "letter": "у",
+      "box": [
+        209,
+        72,
+        221,
+        84
+      ],
+      "rotate_clockwise": false,
+      "shape": "triangle with a mast on its left"
+    },
+    {
+      "letter": "ф",
+      "box": [
+        1530,
+        792,
+        1553,
+        815
+      ],
+      "rotate_clockwise": true,
+      "shape": "circle with a horizontal bar, theta"
+    },
+    {
+      "letter": "х",
+      "box": [
+        385,
+        1029,
+        398,
+        1041
+      ],
+      "rotate_clockwise": false,
+      "shape": "X"
+    },
+    {
+      "letter": "ч",
+      "box": [
+        341,
+        45,
+        354,
+        58
+      ],
+      "rotate_clockwise": false,
+      "shape": "rectangle on a stem"
+    },
+    {
+      "letter": "ш",
+      "box": [
+        1532,
+        837,
+        1552,
+        859
+      ],
+      "rotate_clockwise": true,
+      "shape": "M whose middle vertex reaches the baseline"
+    },
+    {
+      "letter": "ы",
+      "box": [
+        1529,
+        646,
+        1550,
+        669
+      ],
+      "rotate_clockwise": true,
+      "shape": "square M open at the bottom"
+    },
+    {
+      "letter": "ь",
+      "box": [
+        320,
+        46,
+        332,
+        59
+      ],
+      "rotate_clockwise": false,
+      "shape": "T with a wavy bar hanging from it"
+    },
+    {
+      "letter": "ю",
+      "box": [
+        286,
+        44,
+        302,
+        62
+      ],
+      "rotate_clockwise": false,
+      "shape": "three small circles joined by lines"
+    },
+    {
+      "letter": "1",
+      "box": [
+        1535,
+        40,
+        1555,
+        53
+      ],
+      "rotate_clockwise": true,
+      "shape": "vertical stroke with a short diagonal bar, likely the digit 1"
+    }
+  ],
+  "inscriptions": [
+    {
+      "name": "top-left block, line 1",
+      "reading": "left to right, upright",
+      "words": [
+        "я",
+        "надеюсь",
+        "что",
+        "сюда"
+      ]
+    },
+    {
+      "name": "top-left block, line 2",
+      "reading": "left to right, upright",
+      "words": [
+        "будут",
+        "присылать"
+      ]
+    },
+    {
+      "name": "top-left block, line 3",
+      "reading": "left to right, upright",
+      "words": [
+        "много",
+        "биткоинов"
+      ]
+    },
+    {
+      "name": "right-edge column",
+      "reading": "bottom to top, glyph tops pointing left (rotate the column 90 degrees clockwise to read)",
+      "words": [
+        "здесь",
+        "зашифрованы",
+        "биткоины",
+        "на",
+        "черныи",
+        "день",
+        "номер",
+        "1"
+      ]
+    },
+    {
+      "name": "line under the dial",
+      "reading": "left to right, upright",
+      "words": [
+        "сумма",
+        "двух",
+        "чисел"
+      ]
+    }
+  ]
+}

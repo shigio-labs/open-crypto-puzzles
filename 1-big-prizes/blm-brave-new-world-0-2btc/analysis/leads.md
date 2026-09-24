@@ -31,6 +31,14 @@ non-seed-bearing with certainty rather than high confidence, or a mismatch would
 cipher as a candidate word source. The image's pedestal and bottom band remain untranscribed, so
 even a coherent result would not close the glyph inventory completely.
 
+## 3, done 2026-09-24: the rune script is read in full
+
+The 3 inscriptions decode to Russian prose under one key (`analysis/runes.md`,
+`data/rune-key.json`): a joke about donations to the escrow, the statement "here bitcoins
+are encrypted for a black day, number 1", and, under the dial, "the sum of two numbers".
+The rune channel is closed as a direct word source and reopened as the source of a reading
+rule, lead 5 below.
+
 ## 4. Settle BIP39 versus old-Electrum from a source, not from more derivation (needs new
 information)
 
@@ -39,3 +47,24 @@ The puzzle author posted once, in 2020, and has not been heard from since; no kn
 message signature exists. The only path I have not exhausted is a further pass over 2025 to
 2026 Reddit and BitcoinTalk activity for any post that quotes or references a hint from the
 author directly, as opposed to a poster's own guess.
+
+## 5. The dial reading rule: the sum of two numbers, and a phrase longer than 12 words (insight, then bounded compute)
+
+The line under the dial reads "сумма двух чисел", the sum of two numbers. Each hand of the
+dial points between two numerals, not at one: TOWER between 1 and 2, MOON between 12 and 1,
+the short unlabeled hand between 10 and 11 (measured 2026-09-24 on the published image,
+consistent with the fractional positions 1.48 and 0.54 recorded in `analysis/tested.md`).
+Summing the two numerals gives TOWER 3, MOON 13, unlabeled hand 21. "Tower at position 3,
+moon at position 13" are the two anchors the community used from 2020 and that this folder
+retracted as untraceable; they follow from the author's own rule and are reinstated as
+author-derived, with a third value, 21, that nobody has used.
+
+A position 13 or 21 does not exist in a 12-word phrase. Every sweep in `analysis/tested.md`
+assumed 12 words. What would confirm this lead: a reading of the collage that assigns
+positions to more than 12 words with the same rule (other pairs of numbers on the image:
+"1865-202", "05.25.20", "11.03.20", "Section 1", the dial), and a derivation of that phrase
+that matches the escrow. What would kill it: a demonstration that the phrase is fixed at 12
+words by the author, which no published statement gives. Cost: the reading is hours; a
+24-word phrase built from the collage's own vocabulary with fixed positions is seconds to
+test through `tools/oracle.py --stdin` once it exists, and the oracle needs a 24-word mode
+first (it accepts 12 words today).

@@ -87,6 +87,7 @@ not been run (see the leads).
 | Geometric rune script (3 locations, about 85 glyphs) as an independent seed source | 85 glyphs transcribed | monoalphabetic substitution, index-of-coincidence check | decodes as Russian-language prose, not seed words | yes (index of coincidence matches natural-language text) | 2026-08-02 |
 | 3 Latin mottos on the coin | 3 phrases | direct translation | ordinary Latin mottos ("know the causes of things", "let justice be done though the world perish", a proverb about a pot calling a kettle black), no seed words | yes | 2026-06-13 |
 | Bill Cipher fragment above the Trump/Biden panel | 1 fragment | direct decode | reads "DAY", not a BIP39 or old-Electrum word | yes | 2026-08-02 |
+| Geometric rune script read in full with the key in `data/rune-key.json` (3 inscriptions, 19 words, 103 glyphs; the right-edge column reads bottom to top with glyph tops pointing left) | 27 signs | monoalphabetic substitution solved by word pattern, every decoded word looked up in a Russian frequency list | plaintext "я надеюсь что сюда будут присылать много биткоинов", "здесь зашифрованы биткоины на черныи день номер 1", "сумма двух чисел"; no seed word, one reading rule for the dial (see `analysis/runes.md`) | yes: all 19 words are dictionary words under one key | 2026-09-24 |
 
 ## Geometry measurements that refute the 4 anchors independently
 

@@ -7,10 +7,13 @@ escrow of 20,107,284 sats had already been funded on 2020-05-10, before the post
 never commented again. I confirmed the derivation format is either a BIP39 12-word mnemonic or
 an old-Electrum (v1) 12-word mnemonic, both read straight off visible words on the collage, and
 built an oracle that checks either format under every plausible path with zero false positives.
-What I could not confirm is which 12 of roughly 30 candidate words are the real ones, or their
+What I could not confirm is which of roughly 30 candidate words are the real ones, or their
 order: past campaigns, mine and the community's, anchored on 4 claimed word positions that I
-traced back to 2 Reddit accounts with zero posts about this puzzle. Those anchors are retracted
-here. The compute and the derivation paths are well covered; the open question is the input.
+traced back to 2 Reddit accounts with zero posts about this puzzle. On 2026-09-24 I read the
+collage's rune script in full; it is Russian, and the line under the dial, "the sum of two
+numbers", reproduces 2 of those 4 anchors from the dial's own hands (tower 3, moon 13), which
+also says the phrase is longer than the 12 words every sweep assumed. The compute and the
+derivation paths are well covered for 12 words; the open question is the input.
 
 ## At a glance
 
@@ -106,9 +109,23 @@ public vector matches the escrow. Reproduced 2026-08-16.
    archive (searched via pullpush.io, which covers past the Wayback Machine's last snapshot).
    A third cited claim, from `Minase` on BitcoinTalk, is explicitly speculative in its own
    wording. I found no post from the author confirming any word, position, or format.
-5. The geometric rune script (about 85 glyphs across 3 locations on the image) decodes as
-   Russian-language prose under a monoalphabetic substitution, consistent with natural-language
-   text by an index-of-coincidence check; it names no seed word directly.
+5. The geometric rune script (103 glyphs in 3 inscriptions) is read in full: a monoalphabetic
+   substitution of Russian, 26 letters plus one digit-like sign, word separators written as
+   colons, the right-edge column read from the bottom of the image to the top with the glyph
+   tops pointing left. The 3 texts are "я надеюсь что сюда будут присылать много биткоинов"
+   (top left), "здесь зашифрованы биткоины на черныи день номер 1" (right edge) and "сумма
+   двух чисел" (under the dial): a joke about donations to the escrow, a statement that the
+   coins are encrypted here, and a reading rule, the sum of two numbers. No seed word is
+   spelled out. All 19 words are dictionary words under the one key, read 2026-09-24; full
+   notes in [analysis/runes.md](analysis/runes.md).
+6. Applied to the dial, that rule reproduces the 2 community anchors retracted in fact 4:
+   each hand points between two numerals, TOWER between 1 and 2 (sum 3), MOON between 12
+   and 1 (sum 13), and the short unlabeled hand between 10 and 11 (sum 21). The anchors
+   are therefore author-derived after all, and a position 13 means the phrase is longer
+   than the 12 words every sweep below assumed, or that 13 is the passphrase slot.
+
+![The key of the rune script: one exemplar glyph per Cyrillic letter, cropped from the published collage](images/03-key-rune-script.png)
+*Figure 3. The rune key, one exemplar per letter, cropped from the published image at the boxes in data/rune-key.json (script tools/fig_rune_key.py), 2026-09-24.*
 
 ## What has been tested
 
@@ -123,6 +140,7 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Anchor-free BIP39 GPU sweeps: every 12-of-13 choice and every ordering of a 13-word pool read off the image, plus all orderings of 2 fixed 12-word sets (singled-out elements; the BitcoinTalk narrative reading) | 7,185,024,000 sequences (449,054,867 checksum-valid) | BIP39 GPU kernel, `m/44'/0'/0'/0/0` | 0 match | yes: kernel self-test on a planted target | 2026-08-02 |
 | Steganography and file-structure channels | full file | binwalk, EXIF, LSB, zsteg | clean, no hidden channel | yes | 2026-06-13 |
 | Cipher inventory (runes, Latin mottos, Bill Cipher fragment) | 14 elements | direct decode | no additional seed words found | yes | 2026-08-02 |
+| Rune script read in full (3 inscriptions, 19 words, 103 glyphs) | 27 signs | monoalphabetic substitution solved by word pattern, every word checked against a Russian frequency list | Russian prose, no seed word, one reading rule for the dial | yes: all 19 words are dictionary words under one key | 2026-09-24 |
 
 Cumulative: about 30 million derivations across the anchor-based and anchor-free families
 through 2026-06-13, plus 449 million checksum-valid BIP39 derivations from 7.2 billion
@@ -141,13 +159,19 @@ has not been run (see "Open leads, ranked").
    systematic relisting of every word visible on the collage. Confirmed if a word absent from
    every prior pool derives the target once combined with the rest; killed if the relisting
    reproduces the same pool already tested.
-3. **Cross the rune transcription against the Russian-prose cipher key** (minutes, free). The
-   positioned 85-glyph transcription and the substitution-cipher hypothesis have never been
-   directly checked against each other. Confirmed as closed if the decoded prose reads
-   coherently start to finish; reopened as a candidate word source if it does not.
+3. **Done 2026-09-24: the rune script is read in full** (see fact 5). Closed as a direct
+   word source; it supplies the reading rule of lead 5.
 4. **Settle BIP39 versus old-Electrum from a source, not from more derivation** (needs new
    information). This single fact would cut the remaining search space roughly in half; no
-   message signature or other author confirmation is known to exist.
+   message signature or other author confirmation is known to exist. The dial rule of lead 5
+   bears on it: a position 13 rules out old-Electrum v1, which has 12 words only.
+5. **Read the collage under the author's rule, the sum of two numbers, for a phrase longer
+   than 12 words** (hours of reading, then seconds of derivation). The rule gives TOWER 3,
+   MOON 13 and the unlabeled hand 21 on the dial; other number pairs on the image
+   ("1865-202", "05.25.20", "11.03.20", "Section 1") have never been read as positions.
+   Confirmed by a phrase with fixed positions that derives the escrow; killed by an author
+   statement fixing the phrase at 12 words, which does not exist. `tools/oracle.py` accepts
+   12 words today and needs a 24-word mode first.
 
 Full notes: [analysis/leads.md](analysis/leads.md).
 
@@ -159,13 +183,17 @@ Full notes: [analysis/leads.md](analysis/leads.md).
 | `clues/author-posts.md` | the complete author material: the original Reddit post, dated and linked |
 | `data/candidate-regions.json` | the 3 measured pixel regions used in Figure 1 |
 | `data/format-fork.json` | the 3 unknowns and the 2 candidate formats with their exclusive words, used in Figure 2 |
+| `data/rune-key.json` | the rune key: exemplar glyph boxes on the published image, letters, and the 3 inscriptions as decoded words, used in Figure 3 |
 | `analysis/tested.md` | the complete negatives ledger |
-| `analysis/leads.md` | full notes behind the 4 ranked leads |
+| `analysis/leads.md` | full notes behind the ranked leads |
+| `analysis/runes.md` | the rune script read in full: method, key, the 3 plaintexts, what they change |
 | `images/01-annotated-regions.png` | the annotated collage figure |
 | `images/02-format-fork.svg` | the format-fork diagram |
+| `images/03-key-rune-script.png` | the rune key figure |
 | `tools/oracle.py` | candidate checker, BIP39 and old-Electrum v1 modes, both certified |
 | `tools/fig_regions.py` | generates images/01-annotated-regions.png from data/candidate-regions.json |
 | `tools/fig_format_fork.py` | generates images/02-format-fork.svg from data/format-fork.json |
+| `tools/fig_rune_key.py` | generates images/03-key-rune-script.png from data/rune-key.json and the published image |
 
 ## Sources
 
