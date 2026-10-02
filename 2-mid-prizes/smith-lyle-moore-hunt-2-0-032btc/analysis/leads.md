@@ -32,19 +32,24 @@ identifiable film or music video, that title is a strong candidate for the East 
 This has not been attempted; it needs a reverse image search tool and costs on the order of
 an hour.
 
-## 4. Treat the South lock (`b3vye`) as the branch's master key, with a fresh reading of its pun
+## 4. South lock (`b3vye`): SOLVED, `Dr. Roy`
 
-Opening `b3vye` is worth more than opening West or East, since its password also opens the
-entire downstream South chain (a further "escape the island" sequence of pages) in one step.
-The full enumerable Gilligan's Island canon (radio pilot, opening and closing credits, reunion
-films, animated spinoffs, comics) has been checked with no hit, so the answer is more likely
-an off-canon play on the page's own slug,
-`havingfunwiththeurl-ilovedthisshowasakid` ("having fun with the url, I loved this show as a
-kid"), possibly following the same style of planted, deliberate detail the author used on the
-West riddle (the misspelling "unbridaled"). This is the highest-value lead but has no bounded
-cost: it needs a new interpretation of the pun, not a longer list of candidates. A community
-Reddit thread on this hunt (88 comments) contains one reader's guess ("use a different
-title"), explicitly not an author-confirmed answer, and it did not lead anywhere when tried.
+The reader's hint "use a different title" was right after all. The Professor is Roy Hinkley,
+and the gate wants `Dr. Roy` (period and space), not "Professor". The branch is now open past
+it: `Mary Ann` opens the island page, and the island forks into three separately gated exits.
+The new frontier is the two live island exits below; `/death` is a probable dead end.
+
+## 5. Island exits: `/raft-escape` and `/smoke-signals` (the live frontier)
+
+Both are unopened insight gates. A public solver reports about 250,000 failed guesses here, so
+a longer wordlist is not the move; a precise reading is. The island text leans on two sources
+at once: Gilligan's Island (the castaways, the escape-or-stay choice) and, in the "coconuts
+get really old... after a few years, they make you crazy" line and the palm-wood raft, the
+film "Cast Away". Early themed guesses that failed: `Wilson`, `wilson` (raft); `ihavemadefire`,
+`fire` (smoke). The band's own framing ("Woven into our next single, Glimmer, is a story")
+and the East hint ("It is on the video... Think on the name of the song too") both point at
+the Glimmer lyrics/video as the likely source for these answers; that reading is the next
+thing to run down rather than more untethered guesses.
 
 ## External help
 

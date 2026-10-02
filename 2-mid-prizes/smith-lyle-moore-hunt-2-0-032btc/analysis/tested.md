@@ -26,3 +26,36 @@ Cumulative candidate count across the 3 open locks: about 5,000, 0 hits, all unc
 the sense above. The site's gated-page mechanism itself is server-side (a real browser cannot
 bypass it by reading the page body before entering the password), which I confirmed directly
 rather than assumed.
+
+## Breakthrough, 2026-10-02: the South branch is open to its island fork
+
+The South lock `b3vye` ("Name 6") is solved. The answer is `Dr. Roy` (with the period and the
+space): the Professor's real name is Roy Hinkley, and the gate wants a different title, "Dr.",
+not "Professor" or any variant of it, which is why the roughly 775 Professor spellings in the
+row above all failed. The format lesson is that this author's gates can carry punctuation and
+spaces, not only single tokens.
+
+The whole chain was walked, opening each gate in a normal browser as an ordinary participant,
+with no attempt to read any page before its password was entered:
+
+| Page | Gate answer |
+|---|---|
+| coordinates (latitude, then longitude) | `27756932`, then `73511573` (8-digit strings) |
+| `/who-is-she` | `amphitrite` |
+| compass `/choose-your-direction` | shows `north64` `south64` `east64` `west64` in clear |
+| `/south` (storm) | `electricfeel64` (live); `777` is a dead branch (then `666`, `vampire`) |
+| `/awake`, then the castaway chain | `Gilligan`, `Jonas`, `Thurston`, `Lovey`, `Ginger` |
+| `b3vye` ("Name 6") | `Dr. Roy` |
+| `/havingfunwiththeurl-ilovedthisshowasakid` | `Mary Ann` |
+| `/hereonnnnngiligansissssssland` (island) | three exits, below |
+
+The island offers three exits, each a separate locked gate: `/raft-escape` ("Escape via raft,
+made from palm tree wood"), `/smoke-signals` ("Light a Fire to Alert a Passing Ship"), and
+`/death` ("I think I'll just make a life for myself here", the title implying a dead end).
+`/raft-escape` and `/smoke-signals` are the new live frontier and are both unopened.
+
+Credit: the 8-digit coordinate format and the `Dr. Roy` reading were first posted by other
+solvers on the community subreddit (r/smithlylemoore) and in a public findings write-up; both
+were then confirmed here by opening the pages. Guesses already reported as tried and failed by
+that community on the island exits (about 250,000 of them, covering pop-culture, song-lyric,
+mythology, pirate and Gilligan's Island angles) should not be repeated.

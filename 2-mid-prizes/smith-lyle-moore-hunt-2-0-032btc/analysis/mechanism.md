@@ -5,12 +5,21 @@
 The puzzle lives on an approximately 70-page Wix site, almost all of it password-protected
 page by page. The entry page (`/treasure-hunt`) carries an image whose EXIF metadata encodes
 GPS coordinates; entering the latitude and then the longitude as consecutive page passwords
-opens a compass page, which displays four branch passwords in clear text: `north64`,
-`south64`, `east64`, and `west64`. From there the site forks into four branches.
+leads to a `who-is-she` page, and answering that opens a compass page, which displays four
+branch passwords in clear text: `north64`, `south64`, `east64`, and `west64`. From there the
+site forks into four branches.
 
-Everything up to and including the branch fork is solved: I hold every password from the
-entry page through the compass page and through every page each branch passes before its
-final locked gate.
+The coordinate passwords are 8-digit strings, not the decimal or symbol-stripped forms the
+EXIF viewer prints: latitude `27756932` and longitude `73511573`, i.e. the degrees, minutes
+and seconds concatenated, the seconds carried to three decimals and rounded, no sign and no
+separators (27 deg 7' 56.932" N, 73 deg 5' 11.573" W). This is the single detail that gates
+the whole hunt, and it is why a correctly read coordinate still fails until the eighth digit
+is appended. The `who-is-she` page answers to `amphitrite` (Poseidon's wife; the ship on the
+entry page is named Poseidon), lowercase.
+
+Everything up to and including the branch fork is solved, and the South branch is now solved
+to its island fork (see below). I hold every password from the entry page through the compass
+page and through every South page down to the three island-exit gates.
 
 ## The four branches
 
@@ -18,18 +27,39 @@ North is a decorative dead end: its chain of pages (ending in a "coming soon" pa
 none of the 12 words. I confirmed this by reading the full content of every page on the
 branch; no word-bearing artifact of any kind is present.
 
-West, East, and South each end in one password-gated page I have not opened. I call these
-the three insight locks. Opening any of them requires guessing a short, unenumerable string
-that answers the riddle text quoted in [clues/author-posts.md](../clues/author-posts.md), not
-decoding anything hidden in an image or audio file: no steganographic payload was found on
-any page along the way (see analysis/tested.md).
+West and East each still end in one password-gated page I have not opened. South, which was
+the third such lock, is now open and runs well past it. Each of these gates takes a short,
+unenumerable string answering the riddle text quoted in
+[clues/author-posts.md](../clues/author-posts.md), not anything hidden in an image or audio
+file: no steganographic payload was found on any page along the way (see analysis/tested.md).
 
-The South branch is a chain of six pages named after five Gilligan's Island castaways in
-sequence (Gilligan, the Skipper, Thurston Howell III, Lovey Howell, Ginger), each password a
-single Title Case name, before ending on a sixth page titled "Name 6" that asks for the
-sixth castaway, the Professor. This last page is the one I have not opened; solving it opens
-the entire South branch's downstream chain (a further set of "escape the island" pages) in
-one step, since password to `b3vye` is also the key to everything after it.
+The South branch, in full. After `south64` the storm page `/south` shows two passwords in
+clear text: "But I'm Strong and Woke Up the Next Day" = `electricfeel64` (the live path) and
+"I Never Woke Up" = `777` (a heaven/hell dead branch, with `666` and `vampire` beyond it).
+`electricfeel64` opens `/awake` ("There are now 6 others aboard your ship"), which begins a
+chain of pages naming the seven castaways in sequence, each password a single Title Case name:
+`Gilligan`, then `Jonas` (the Skipper, Jonas Grumby), `Thurston`, `Lovey`, `Ginger`, then the
+"Name 6" gate `b3vye`, and finally `Mary Ann` on `/havingfunwiththeurl-ilovedthisshowasakid`.
+
+The "Name 6" gate is the one the whole community was stuck on. Its answer is **`Dr. Roy`**
+(with the period and the space): the Professor's real name is Roy Hinkley, and the page
+rewards a different title ("Dr.") rather than "Professor", which is why every spelling of
+"Professor" failed. This is the key correction: earlier I assumed `b3vye` was a single Title
+Case token with no spaces and no punctuation, and that its password would also open everything
+downstream. Both were wrong. The answer carries a period and a space, and every page after it
+is separately gated (`Mary Ann`, then the island, then each of the three island exits).
+
+`Mary Ann` opens the island page `/hereonnnnngiligansissssssland`: the castaways wash ashore,
+survive on coconuts ("after a few years, they make you crazy"), and are offered three exits,
+each its own locked gate:
+
+- `/raft-escape` -- "Escape via raft, made from palm tree wood"
+- `/smoke-signals` -- "Light a Fire to Alert a Passing Ship"
+- `/death` -- "I think I'll just make a life for myself here" (the title implies a dead end)
+
+`/raft-escape` and `/smoke-signals` are the live frontier. Both are unopened, and a public
+solver reports firing roughly 250,000 guesses at the island exits with no hit, so these are
+insight gates, not enumerable ones.
 
 ## Case sensitivity and format, established by direct test
 
@@ -38,8 +68,9 @@ South chain: the page password `Gilligan` succeeds where `gilligan` and `GILLIGA
 and `Ginger` succeeds where `ginger` and `GINGER` both fail. Combined with the passwords
 already known for every other open gate, the format of the three remaining locks is:
 
-- South (`b3vye`): Title Case, a single token, no digits, no spaces (matches the naming
-  pattern of the five prior South pages).
+- South (`b3vye`): solved, `Dr. Roy` -- Title Case but with a period and a space, which breaks
+  the "single token, no punctuation" assumption I had held for the three locks. The island
+  exits after it (`/raft-escape`, `/smoke-signals`) have no confirmed format yet.
 - West (`wt1jy`) and East (`c2ozw`): lowercase, a single token with no spaces (matches every
   other open West/East page password, e.g. `albatross`, `semaphore`, `20000leagues`).
 

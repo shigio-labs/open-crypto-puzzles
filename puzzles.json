@@ -3281,7 +3281,7 @@
           "label": "main",
           "explorer": "https://mempool.space/address/bc1q0akdjvrc2csau2n3gyxa3xcq0fss852x997m9y",
           "expected": "3177700 sats",
-          "verified_on": "2026-08-16",
+          "verified_on": "2026-10-02",
           "verified_state": "funded-unspent"
         },
         {
@@ -3308,7 +3308,7 @@
         "certified_against": "the published account xpub, whose m/0/0 P2WPKH address equals the escrow; a known-wrong BIP39 test vector is also confirmed to produce NO MATCH. The BIP39-mnemonic-to-seed leg has no known-good vector, since 0 of 12 words are held"
       },
       "difficulty_left": "insight",
-      "difficulty_note": "the 12 words and passphrase are locked behind 3 password-gated pages, each requiring a specific author-intended answer to a riddle rather than a decodable cipher; about 5,000 candidates have been tried across the 3 locks with 0 hits, none of them a certified exhaustive negative",
+      "difficulty_note": "the South lock (b3vye, \"Name 6\") is now solved: the answer is 'Dr. Roy' (period and space), the Professor Roy Hinkley under a different title; the branch runs past it (Mary Ann, then an island page) to three new gates, of which raft-escape and smoke-signals are the live frontier and death is a probable dead end. West and East remain unopened. Each gate takes a specific author-intended riddle answer, not a decodable cipher; a public solver reports ~250,000 failed guesses on the island exits, so these are insight gates. The Glimmer song/video is the likeliest source for the island and East answers but its lyrics are unpublished and the video is served only from the site",
       "tested_total": {
         "candidates": 5000,
         "families": 6,

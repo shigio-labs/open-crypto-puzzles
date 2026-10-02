@@ -19,12 +19,12 @@ cryptography.
 | Prize | 0.031777 BTC (about $2,002 at BTC = $63,000, 2026-08-16) |
 | Chain | bitcoin |
 | Escrow | `bc1q0akdjvrc2csau2n3gyxa3xcq0fss852x997m9y` ([mempool.space](https://mempool.space/address/bc1q0akdjvrc2csau2n3gyxa3xcq0fss852x997m9y)) |
-| Last on-chain check | 2026-08-16: funded and unspent (3,177,700 sats received, 0 spent, 1 transaction) |
+| Last on-chain check | 2026-10-02: funded and unspent (3,177,700 sats received, 0 spent, 1 transaction) |
 | Status | OPEN |
 | Puzzle type | bip39-seed, password-pages, web-tree |
 | Target format | BIP39 12 words, English wordlist, plus a passphrase, BIP84 `m/84'/0'/0'/0/0`, P2WPKH |
 | Certified oracle | yes: `tools/oracle.py --selftest` (certified against the published account xpub, whose m/0/0 P2WPKH address equals the escrow; see "Certified against" for the scope this does and does not cover) |
-| What remains | the exact riddle answers for 3 password-gated pages; an insight problem, not a compute problem |
+| What remains | the riddle answers for 4 gates: West, East, and the two island exits (`/raft-escape`, `/smoke-signals`) past the now-solved South lock; an insight problem, not a compute problem |
 | Series | none (a first hunt on the same site, "Born to Be Wild", was solved and swept by another reader years ago; I use its known solution only as a template, see Mechanism) |
 
 ## The puzzle as published
@@ -121,10 +121,11 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Puzzle-wide lowercase password rule | 2 known passwords retested in 3 case forms each | direct page-password submission on open gates | refuted: only Title Case succeeds | yes: both known-good passwords reproduced | 2026-07-25 |
 | Cover-art trailer-byte channel (word 1) | 1,585 images | byte scan after EOF, same method that finds the real payload on the solved Hunt #1 cover | 0 match on Hunt #2 material | yes: positive control on the Hunt #1 cover | 2026-07-14 |
 | Audio steganography on the public master | 1 file, 4 techniques | Morse/reverse/LSB/spectrogram analysis | 0 match, no alternate mix found | uncertified | 2026-07-10 |
+| **South lock `b3vye` ("Name 6")** | the Professor's name under a different title | direct page-password submission | **SOLVED: `Dr. Roy`** (period and space); the branch now runs to its island fork | yes: the gate opened | 2026-10-02 |
 
-Cumulative across the 3 open locks: about 5,000 candidates, 0 hits, all uncertified per the
-witness definition above (no known-good answer exists yet to prove full coverage of any one
-lock's format).
+The South lock is solved; see [analysis/tested.md](analysis/tested.md) for the full chain. The
+live frontier is now two island-exit gates, `/raft-escape` and `/smoke-signals`, plus the
+still-unopened West and East locks.
 
 ## Open leads, ranked
 
@@ -137,11 +138,11 @@ lock's format).
    variants (`gandalfthewhite`, `mithrandir`, `flyyoufools`, `theturnofthetide`, `endno`).
 3. **Reverse image search the `LifeFlashBeforeEyes.mp4` clip stills on the East branch**
    (hours). If any still frame is identifiable, its source title is a strong East candidate.
-4. **A fresh reading of the South lock's own pun** (needs new information). Opening `b3vye`
-   unlocks the entire downstream South chain in one step, but the full Gilligan's Island canon
-   is exhausted; the likely answer is an off-canon play on the page's own slug,
-   `havingfunwiththeurl-ilovedthisshowasakid`, in the same deliberate-detail style the author
-   used on the West riddle ("unbridaled").
+4. **South lock: solved** (`Dr. Roy`). Each downstream page turned out to be separately gated,
+   not opened in one step; `Mary Ann` leads to the island, which forks into three gates.
+5. **The two island exits, `/raft-escape` and `/smoke-signals`** (the live frontier). Both are
+   unopened insight gates; a public solver reports ~250,000 failed guesses here, so the lead is
+   the Glimmer song/video (the band says the story is "woven into" it), not a longer wordlist.
 
 Full notes: [analysis/leads.md](analysis/leads.md).
 
