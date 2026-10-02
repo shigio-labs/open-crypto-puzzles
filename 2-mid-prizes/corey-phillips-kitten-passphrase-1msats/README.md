@@ -122,8 +122,9 @@ Full ledger in [analysis/tested.md](analysis/tested.md). Summary:
 | Corey in-joke phrases, raw plus 2 rule sets | 2,808,334 | GPU derivation | 0 match | yes | 2026-06-13 |
 | Author's own bundled wordlists | 705,613 | CPU derivation | 0 match | yes | 2026-06-13 |
 | 5 smaller families (quotes, combinator, audio message variants, alternate paths, btcrecover cross-check) | 44,469 | GPU and CPU derivation | 0 match | yes | 2026-06-13 |
+| Thematic set from the photo's origin (Andreas Antonopoulos's 2015 stego tweet, its hidden transaction) and from the article itself | 3,664 | CPU derivation | 0 match | yes: empty passphrase re-found as the sister address 3 of 3 | 2026-10-02 |
 
-Cumulative: 1,155,064,682 candidates tested, 0 matches, across 11 families. Witness
+Cumulative: 1,155,068,346 candidates tested, 0 matches, across 12 families. Witness
 caveat that applies to every row: a control passphrase was recovered in the same run and
 independently reproduced by a second tool, but its position within each run was not
 separately logged, so this is a well-instrumented negative rather than a formally

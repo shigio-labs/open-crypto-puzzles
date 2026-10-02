@@ -22,8 +22,9 @@ own standard this is a well-instrumented negative, not a formally exhaustive one
 | The decoded audio-puzzle message ("i am 24 words long and found on path 84") and 32 minimal variants (case, punctuation, spacing, spelled-out path) | 32 | GPU derivation | 0 match | yes | 690,000/s on a rented GPU | 2026-06-13 |
 | Alternate BIP84 index paths (change/index 0/1, 1/0, 1'/0/0, 0/2) replayed on the Corey-specific corpus | 432 | GPU derivation | 0 match | yes | 690,000/s on a rented GPU | 2026-06-13 |
 | Independent cross-check with a second, separate tool (btcrecover) on the Corey-specific corpus and combinator | 7,454 | CPU, btcrecover | 0 match | yes: recovers the same planted control | 1,000/s on CPU | 2026-06-13 |
+| Thematic set built from the photo's origin (Andreas Antonopoulos's 2015 stego tweet: the hidden transaction ID, the tweet ID and text, steganography/F5/SonicVortex terms) and from the article and tool themselves (title and tagline, the kitten hash, the base64 snippets, both addresses, the mnemonic, the author's PGP fingerprint, handles, dates), each in case, spacing and punctuation variants, plus two-word joins of 15 short thematic tokens | 3,664 | CPU derivation, BIP84 index 0, 4 processes | 0 match | yes: the empty passphrase planted at head, middle and tail, re-found as the sister address 3 of 3 | about 780/s on 4 shared CPU cores | 2026-10-02 |
 
-Cumulative: 1,155,064,682 candidates tested, 0 matches, across 11 families.
+Cumulative: 1,155,068,346 candidates tested, 0 matches, across 12 families.
 
 ## Other channels checked, not passphrase sweeps
 
@@ -38,3 +39,19 @@ Cumulative: 1,155,064,682 candidates tested, 0 matches, across 11 families.
   1260 Hz, demodulated with minimodem, yielding a Bitcoin transaction with an OP_RETURN
   message). The message describes a 24-word seed on BIP84, the same structure as this
   puzzle, but is not itself a usable passphrase (tested as one above, row 9).
+
+## Where the photo comes from (2026-10-02)
+
+The article (also mirrored on Hackernoon, 2019-08-22, as "Part 1/3: Can You Turn Your
+Photos Into Bitcoin Private Keys/Addresses? Hell Yeah !!") opens with its source: the
+kitten photo is the picture Andreas Antonopoulos tweeted on 2015-05-27
+(https://twitter.com/aantonop/status/603701870482300928, "Governments try to ban
+bitcoin? LOL The image below includes a signed bitcoin transaction transferring $12m
+USD."), which carried a signed transaction hidden by steganography. Brave New Coin's
+write-up (2015-11-23) links the hidden transaction as
+`29a3efd3ef04f9153d47a990bd7b048a4b2d213daaa5fb8ed670fb85f13bdbcf` and quotes him: "Stego is
+almost always encrypted first (as is the case in my kitten photo)." That is why the
+exiftool/binwalk/strings pass above finds nothing: an encrypted F5-style payload sits in
+the DCT coefficients and needs its own key. None of this origin had been used as a
+passphrase source before the 3,664-candidate row above, which is negative. The article
+also announces Part 2 as being about timestamping documents, not about this passphrase.

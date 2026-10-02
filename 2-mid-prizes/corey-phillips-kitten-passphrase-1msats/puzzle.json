@@ -37,7 +37,7 @@
   },
   "difficulty_left": "external-info",
   "difficulty_note": "the mnemonic and derivation are fully certified; about 1.16 billion passphrase candidates have been tested across curated, rule-mangled, and raw wordlist regions with 0 matches; the author states the puzzle is not meant to be solved, so the passphrase is a freely chosen secret with no confirmed public provenance",
-  "tested_total": { "candidates": 1155064682, "families": 11, "certified": true },
+  "tested_total": { "candidates": 1155068346, "families": 12, "certified": true },
   "leads": [
     { "rank": 1, "title": "ask the author directly", "cost": "needs-a-person", "status": "open" },
     { "rank": 2, "title": "safety-net derivation on BIP44 and BIP49", "cost": "minutes", "status": "open" },

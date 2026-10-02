@@ -17,3 +17,4 @@ famous quotes plus BIP39 wordlist as a single-word passphrase,29201,GPU,690000,y
 audio-puzzle decoded message and 32 minimal variants,32,GPU,690000,yes,2026-06-13
 alternate BIP84 index paths (0/1 1/0 1'/0/0 0/2) on the Corey corpus,432,GPU,690000,yes,2026-06-13
 independent cross-check with a second tool (btcrecover),7454,CPU,1000,yes,2026-06-13
+thematic set from the photo's origin (Antonopoulos 2015 stego tweet) and the article,3664,CPU,780,yes,2026-10-02
