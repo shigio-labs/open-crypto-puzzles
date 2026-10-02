@@ -28,6 +28,8 @@ README's "Certified against" section). Rows 1-6 are dated 2026-07-25; rows 7-8 a
 | 17 | Joint-naming model: the four clues as words in one 58-character string rather than four concatenated sub-answers. Every ordered concatenation of the clue-implied vocabulary (38 tokens: blue, whale, hexagon, alien, the scientific name, the three investors, the Forbes headline terms, date forms) totalling exactly 58 characters, plus case variants of the 240 that contain all four clue words | 516,138 | 0 match |
 | 18 | Piece 4 as a tincture sequence (20 initials) instead of five letters, reopening the algebra to p1 + p2 = 31: 576 tincture strings (6 square orders x 24 quadrant orders x colour/heraldic initials x case) against the four pairings that close the budget -- 28+3 (`USV`), 12+19 (`UnionSquareVentures`), 13+18 (`AndreessenHorowitz`), 11+20 | 414,720 | 0 match |
 | 19 | Piece 4 ordered by hatch-line count (`LEINA`/`ANIEL` and cases) x 144 piece-1 strings x 4 `AndreessenHorowitz` variants x 4 piece-3 forms | 13,824 | 0 match |
+| 20 | Piece 2 as a wallet address the author already uses: the #11 escrow `0xFF2142E98E09b5344994F9bEB9C56C95506B9F17` (EIP-55 and lowercase, 42 chars, piece 1 a 4-letter colour from 15 in 3 cases) and the 4 Arweave addresses of #3, #8, #10 and #12 (43 chars, piece 1 a 3-letter colour from 7 in 3 cases), piece 3 `2111011`/`Hexagon`, piece 4 `Alien`/`ALIEN`/`alien`, all 24 block orders, exact 58 | 25,056 (196 s) | 0 match; witness 3 of 3 |
+| 21 | Piece 2 as the public a16z Ethereum address `0x05E793cE0C6027323Ac150F6d45C2344d28B6019` (EIP-55 and lowercase with `0x` against 4-letter colours, both forms without `0x` against 6-letter colours), piece 3 `2111011`/`Hexagon`, piece 4 `Alien`/`ALIEN`/`alien`, all 24 block orders, exact 58 | 19,872 | 0 match; witness 3 of 3 |
 
 ## Notes on rows 7 and 8 (2026-08-18)
 
@@ -278,3 +280,29 @@ Primary posts: [USDT](https://x.com/whale_alert/status/1239522831525961729),
 [HUSD emission one](https://x.com/whale_alert/status/1239383378400546817),
 [HUSD emission two](https://x.com/whale_alert/status/1239383375674314753).
 Recorded funding on 2026-09-05 00:12:55 UTC: 400.00248121 AR, no outgoing transactions.
+
+## Wallet-address readings of piece 2, 2026-10-02 (rows 20 and 21)
+
+The reason to try an address at all is the length algebra. With piece 1 read as the
+single colour the blank flag stands for (`Blue`, 4), piece 3 at 7 and piece 4 at 5, piece
+2 has to be exactly 42 characters, which is an Ethereum address with `0x`; with a
+3-letter colour it is 43, an Arweave address. The author already publishes EIP-55
+checksummed addresses (the #11 escrow) and uses raw key material as an answer (#11), so
+a case-sensitive address is in his range, and "58 chars CS" fits it. Rows 20 and 21 only
+test the addresses I could name offline; they say nothing about the whale wallet the date
+points to, which still has to be looked up on chain.
+
+Method: `tools/fastcheck.c`, which runs the same SHA-512 x11513 and EvpKDF steps as
+`oracle.py` and decrypts only the first ciphertext block, reporting any block that opens
+with `{"kty":"RSA"` or is printable and opens with `{` (a hit would then be confirmed with
+`oracle.py`). Rate about 117 candidates per second on 4 CPU cores. Witness: the same binary
+with #8's salt and first block re-finds `RasputinWilhelmAlekhine` at head, middle and tail
+of each run's list (3 of 3), and rejects the lowercase form. The EIP-55 checksums were
+computed locally and checked against the #11 address as printed by the author.
+
+The date itself is now pinned to a source: Michael Haley, "Arweave's Permanent 'Library
+Of Alexandria' On Blockchain To Halt Censorship, Empower Information", Forbes,
+2020-03-16, https://www.forbes.com/sites/michaelhaley/2020/03/16/arweaves-permanent-library-of-alexandria-on-blockchain-to-halt-censorship-empower-information/.
+The funding round it reports was announced earlier, on 2020-03-05
+(https://arweave.medium.com/arweave-announces-new-funding-from-andreessen-horowitz-usv-and-coinbase-ventures-30a1fde3d8c5),
+so the drawn date points at the article, not at the announcement.
