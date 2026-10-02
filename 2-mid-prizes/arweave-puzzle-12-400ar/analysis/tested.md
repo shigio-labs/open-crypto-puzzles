@@ -39,6 +39,8 @@ README's "Certified against" section). Rows 1-6 are dated 2026-07-25; rows 7-8 a
 | 28 | Piece 1 as six hex codes with the rounded values `C00000 808080 8000FF 408000 400080` plus `FFFFFF`, all 720 orders, upper and lower case: bare (36) against 12 ten-character piece-2 strings (`BlueMonday` in 5 cases, 7 date forms), and `#`-prefixed (42) against `Blue`/`blue`/`BLUE`; `2111011`; `Alien`/`ALIEN`/`alien` | 64,800 | 0 match; witness 3 of 3 |
 | 29 | Row 28 with the blank flag as `0000FF` | 64,800 | 0 match; witness 3 of 3 |
 | 30 | Row 28 with the values exactly as the JPEG decodes them (`7F00FF 3F8000 410080`) and `FFFFFF` | 64,800 | 0 match; witness 3 of 3 |
+| 31 | Row 28's construction with 11 further blank-flag values derived from the colour arithmetic (`FF0080 80FF00 000080 0000C0 C0C0C0 000000 4040FF 0040FF 0080FF 8080FF 404040`), piece 2 = `BlueMonday` in 5 cases or `16-03-2020` (bare codes) and `Blue` in 3 cases (`#` codes) | 427,680 | 0 match; witness 3 of 3 |
+| 32 | Piece 1 in 7 written forms of the six colours (decimal RGB run together, comma-separated, zero-padded, hex upper/lower, `#`hex upper/lower), rounded and JPEG values, blank `FFFFFF` or `0000FF`, all 720 orders; piece 2 any of 36 whale/date readings (`Blue`, `BlueMonday`, `Monday`, `BlackMonday`, `BlueWhale`, `Whale`, `MobyDick`, `Forbes`, `a16z`, 7 date forms, cases) whose length closes the 58-character budget; `2111011`; `Alien`/`ALIEN`/`alien`; strings already in rows 28-30 removed | 190,080 | 0 match; witness 3 of 3 |
 
 ## Notes on rows 7 and 8 (2026-08-18)
 
