@@ -30,6 +30,15 @@ README's "Certified against" section). Rows 1-6 are dated 2026-07-25; rows 7-8 a
 | 19 | Piece 4 ordered by hatch-line count (`LEINA`/`ANIEL` and cases) x 144 piece-1 strings x 4 `AndreessenHorowitz` variants x 4 piece-3 forms | 13,824 | 0 match |
 | 20 | Piece 2 as a wallet address the author already uses: the #11 escrow `0xFF2142E98E09b5344994F9bEB9C56C95506B9F17` (EIP-55 and lowercase, 42 chars, piece 1 a 4-letter colour from 15 in 3 cases) and the 4 Arweave addresses of #3, #8, #10 and #12 (43 chars, piece 1 a 3-letter colour from 7 in 3 cases), piece 3 `2111011`/`Hexagon`, piece 4 `Alien`/`ALIEN`/`alien`, all 24 block orders, exact 58 | 25,056 (196 s) | 0 match; witness 3 of 3 |
 | 21 | Piece 2 as the public a16z Ethereum address `0x05E793cE0C6027323Ac150F6d45C2344d28B6019` (EIP-55 and lowercase with `0x` against 4-letter colours, both forms without `0x` against 6-letter colours), piece 3 `2111011`/`Hexagon`, piece 4 `Alien`/`ALIEN`/`alien`, all 24 block orders, exact 58 | 19,872 | 0 match; witness 3 of 3 |
+| 22 | Piece 2 as any address or transaction ID in the 42 AR transfers of 2020-03-16 (blocks 405,400 to 406,500, 88 distinct 43-character strings), piece 1 one of 49 three-character strings (3-letter colours and 3-digit hex shorthands, 3 cases), piece 3 `2111011`/`Hexagon`, piece 4 `Alien`/`ALIEN`/`alien`, order 1-2-3-4 | 25,872 | 0 match; witness 3 of 3 |
+| 23 | The 50,000 AR whale chain of that day (4 wallets, 3 transaction IDs), same piece-1/3/4 sets, all 24 block orders | 49,392 | 0 match; witness 3 of 3 |
+| 24 | Piece 2 = the whale `TXtdc5sYvnEhAz9_TLvufHG_EqKqa11x5h_7ATL84aI`, piece 1 exhaustive over 3 characters (every `[a-z]{3}` in lower, upper and title case, plus `000`-`999`), `2111011`, `Alien`, order 1-2-3-4 | 53,728 | 0 match; witness 3 of 3 |
+| 25 | Same exhaustive piece 1 against: the whale's transfer ID `xnD8xho3VXS6hMg3Cn1SVZPxcEfnBUrsp1WYipZUmNg` with `Alien`/`ALIEN`/`alien`; the whale address with `ALIEN`/`alien`; the whale address with `Hexagon` | 322,368 | 0 match; witness 3 of 3 |
+| 26 | Whale address, exhaustive piece 1, block orders 1-3-2-4, 2-1-3-4, 3-4-1-2, 4-3-2-1 | 214,912 | 0 match; witness 3 of 3 |
+| 27 | The whale's exchange deposit address `pHSToSf5YILJEuyFz4VSZPGoi4KKKmXmHk5ZVoVMusk`, exhaustive piece 1, order 1-2-3-4 | 53,728 | 0 match; witness 3 of 3 |
+| 28 | Piece 1 as six hex codes with the rounded values `C00000 808080 8000FF 408000 400080` plus `FFFFFF`, all 720 orders, upper and lower case: bare (36) against 12 ten-character piece-2 strings (`BlueMonday` in 5 cases, 7 date forms), and `#`-prefixed (42) against `Blue`/`blue`/`BLUE`; `2111011`; `Alien`/`ALIEN`/`alien` | 64,800 | 0 match; witness 3 of 3 |
+| 29 | Row 28 with the blank flag as `0000FF` | 64,800 | 0 match; witness 3 of 3 |
+| 30 | Row 28 with the values exactly as the JPEG decodes them (`7F00FF 3F8000 410080`) and `FFFFFF` | 64,800 | 0 match; witness 3 of 3 |
 
 ## Notes on rows 7 and 8 (2026-08-18)
 
@@ -306,3 +315,33 @@ Of Alexandria' On Blockchain To Halt Censorship, Empower Information", Forbes,
 The funding round it reports was announced earlier, on 2020-03-05
 (https://arweave.medium.com/arweave-announces-new-funding-from-andreessen-horowitz-usv-and-coinbase-ventures-30a1fde3d8c5),
 so the drawn date points at the article, not at the announcement.
+
+## The whale of 2020-03-16, and the hex reading (rows 22 to 30, 2026-10-02)
+
+The drawn date maps to Arweave blocks 405,601 (2020-03-16 00:00:55 UTC) to 406,281; rows 22
+and 23 take 405,400 to 406,500 to cover the author's +03:00 day as well. That window holds
+19,454 transactions but only 42 AR transfers, so every address and transfer ID in it was
+tested. The largest movement of the day is 50,000 AR from
+`TXtdc5sYvnEhAz9_TLvufHG_EqKqa11x5h_7ATL84aI` at 12:27:33 UTC (block 405,959, transfer
+`xnD8xho3VXS6hMg3Cn1SVZPxcEfnBUrsp1WYipZUmNg`) to the deposit address
+`pHSToSf5YILJEuyFz4VSZPGoi4KKKmXmHk5ZVoVMusk`, forwarded 17 minutes later to the exchange
+hot wallet `v4rKQYDdiDLdza3yUe_VvSqgYv5kVDdFHFNGpvS_K7I`. `TXtdc5...` is a real whale: it
+received 600,000 AR on 2018-12-14 and sold it down in lots of 35,000 to 200,000 AR between
+2019-07 and 2020-05. If piece 2 is a 43-character Arweave string, piece 1 is forced to 3
+characters, which is small enough to exhaust; rows 24 to 27 do that for the strongest
+configurations and are negative.
+
+The hex reading comes from two observations. Red and gray decode exactly (`C00000`,
+`808080`), while the three saturated colours decode one step off a round value
+(`7F00FF`, `3F8000`, `410080`), which is what JPEG rounding does to `8000FF`, `408000`,
+`400080`. The values the author typed are therefore almost certainly multiples of `0x40`,
+and the earlier hex runs (rows 15 and 16) were built on the decoded values and on 12 of the
+720 flag orders. Second, a reply under the puzzle's announcement reads the drawn date as a
+Monday and the whale as blue, and both `BlueMonday` (10) next to six bare codes (36) and
+`Blue` (4) next to six `#` codes (42) close the 58-character budget exactly. Rows 28 to 30
+are negative for all 720 orders.
+
+Method, rate and witness as for rows 20 and 21: `tools/fastcheck.c` at about 117 candidates
+per second on 4 CPU cores; each run is followed by the same binary on #8's parameters with
+`RasputinWilhelmAlekhine` inserted at head, middle and tail of a slice of that run's list,
+re-found 3 of 3 every time.

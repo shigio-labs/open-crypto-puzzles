@@ -21,7 +21,7 @@ matches.
 | Prize | 400.00248121 AR (about $724 at AR = $1.81, 2026-08-16) |
 | Chain | arweave |
 | Escrow | `XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg` ([explorer](https://viewblock.io/arweave/address/XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg)) |
-| Last on-chain check | 2026-08-16: funded and unspent, 400002481210000 winston, 0 outgoing transactions ever |
+| Last on-chain check | 2026-10-02: funded and unspent, 400002481210000 winston, 0 outgoing transactions ever |
 | Status | OPEN |
 | Puzzle type | word-selection, geometry, text-cipher |
 | Target format | one 58-character case-sensitive answer, 4 sub-answers concatenated with no separator, SHA-512 x11513, AES-decrypt to an Arweave JWK keyfile |

@@ -33,7 +33,7 @@
       "label": "main",
       "explorer": "https://viewblock.io/arweave/address/XRGEfkMbCMHeTY9mZI9Lh6hf8EmA8RstmBFUjDm40fg",
       "expected": "400.00248121 AR",
-      "verified_on": "2026-08-16",
+      "verified_on": "2026-10-02",
       "verified_state": "funded-unspent"
     }
   ],
@@ -118,5 +118,5 @@
     }
   ],
   "third_party_material": "the jigsaw image is the author's own puzzle material, published on the Arweave permaweb page; no book, audio, or video material",
-  "last_updated": "2026-09-07"
+  "last_updated": "2026-10-02"
 }
